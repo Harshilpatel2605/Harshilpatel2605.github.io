@@ -8,7 +8,7 @@ emial : <patel.navin.22031@iitgoa.ac.in>
 
 Profile Picture:
 
-<img src="https://avatars.githubusercontent.com/u/129682627?s=120&v=4" height="300" >
+<img src="https://avatars.githubusercontent.com/u/129682627?v=4" height="300" >
 
 
 ##### Here is a short description about me...
