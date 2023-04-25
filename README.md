@@ -4,7 +4,8 @@
 _______________
 ### About me
 Name : Harshil Navin Patel
-emial : <patel.navin.22031@iitgoa.ac.in>
+
+Email : <patel.navin.22031@iitgoa.ac.in>
 
 Profile Picture:
 
@@ -12,7 +13,7 @@ Profile Picture:
 
 
 ##### Here is a short description about me...
-Hello there, my name is Harshil Patel. I hail from Ahmedabad and came to Goa for higher education.
+Hello there, my name is Harshil Patel. I am from Ahmedabad and came to Goa for higher education.
 
 I am a very Down to earth personality and keen to talk.
 
