@@ -7,6 +7,8 @@ Name : Harshil Navin Patel
 
 Email : <patel.navin.22031@iitgoa.ac.in>
 
+Linked In [Profile](https://www.linkedin.com/in/harshil-patel-14b682251)
+
 Profile Picture:
 
 <img src="https://avatars.githubusercontent.com/u/129682627?v=4" height="300" >
