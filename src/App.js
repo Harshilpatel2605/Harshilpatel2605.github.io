@@ -3,7 +3,7 @@ import { FaPython, FaCuttlefish, FaJs, FaReact, FaRegStar, FaTrophy, FaGithub } 
 import { SiMui, SiHaskell, SiNumpy, SiPandas, SiGit } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function downloadResume() {
   const link = document.createElement('a');
@@ -14,12 +14,46 @@ function downloadResume() {
   document.body.removeChild(link);
 }
 
+function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  return (
+    <nav className="portfolio-navbar">
+      <div className="navbar-content">
+        <span className="navbar-name">HARSHIL PATEL</span>
+        <button className="navbar-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+          <span className={menuOpen ? 'bar open' : 'bar'}></span>
+        </button>
+        <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
+          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
+          <li><a href="#achievements" onClick={() => setMenuOpen(false)}>Achievements</a></li>
+          <li><a href="https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a></li>
+          <li>
+            <a href="https://github.com/Harshilpatel2605" target="_blank" rel="noopener noreferrer" aria-label="GitHub" onClick={() => setMenuOpen(false)}>
+              <FaGithub style={{ verticalAlign: 'middle', fontSize: '1.3em' }} />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="navbar-wave">
+        <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path fill="#6366f1" fillOpacity="0.18" d="M0,30 C360,60 1080,0 1440,30 L1440,50 L0,50 Z"/>
+          <path fill="#2563eb" fillOpacity="0.13" d="M0,40 C400,0 1040,60 1440,20 L1440,50 L0,50 Z"/>
+        </svg>
+      </div>
+    </nav>
+  );
+}
+
 function App() {
   useEffect(() => {
     AOS.init({ duration: 900, once: true, offset: 40 });
   }, []);
   return (
     <div className="App">
+      <Navbar />
       <header className="portfolio-header fade-in">
         <h1>
           Harshil Patel
@@ -40,7 +74,7 @@ function App() {
           </svg>
         </div>
       </header>
-      <section className="portfolio-section" data-aos="fade-up">
+      <section className="portfolio-section" id="skills" data-aos="fade-up">
         <h2 className="accent-heading">Skills</h2>
         <div className="portfolio-skills-group">
           <div className="portfolio-skills-left">
@@ -78,7 +112,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="portfolio-section" data-aos="fade-up" data-aos-delay="100">
+      <section className="portfolio-section" id="projects" data-aos="fade-up" data-aos-delay="100">
         <h2 className="accent-heading">Featured Projects</h2>
         <div className="portfolio-projects-grid">
           <div className="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
@@ -98,7 +132,7 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="portfolio-section" data-aos="fade-up" data-aos-delay="200">
+      <section className="portfolio-section" id="achievements" data-aos="fade-up" data-aos-delay="200">
         <h2 className="accent-heading">Achievements</h2>
         <ul className="portfolio-achievements">
           <li><FaTrophy className="icon-achievement" /> Got AIR 2740 in JEE Advanced, and AIR 3047 in JEE Mains (General Category).</li>
@@ -115,7 +149,7 @@ function App() {
             <span>|</span>
             <a href="https://www.linkedin.com/in/harshil-patel-hnp2605/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <span>|</span>
-            <a href="https://leetcode.com/u/harshilnavinpatel/" target="_blank" rel="noopener noreferrer">LeetCode</a>
+            <a href="https://github.com/Harshilpatel2605" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
           </div>
           <div className="footer-meta">
             <span>&copy; {new Date().getFullYear()} Harshil Patel</span>
