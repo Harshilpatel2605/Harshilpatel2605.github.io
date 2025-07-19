@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 function downloadResume() {
   const link = document.createElement('a');
-  link.href = 'https://drive.google.com/uc?export=download&id=1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4';
+  link.href = 'https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view';
   link.download = 'Harshil_Patel_Resume.pdf';
   document.body.appendChild(link);
   link.click();
