@@ -1,13 +1,13 @@
 import './App.css';
 import { FaPython, FaCuttlefish, FaJs, FaReact, FaRegStar, FaTrophy, FaGithub } from 'react-icons/fa';
-import { SiMui, SiHaskell, SiNumpy, SiPandas, SiGit } from 'react-icons/si';
+import { SiMui, SiNumpy, SiPandas, SiGit } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 
 function downloadResume() {
   const link = document.createElement('a');
-  link.href = 'https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view';
+  link.href = 'https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view?usp=drive_link';
   link.download = 'Harshil_Patel_Resume.pdf';
   document.body.appendChild(link);
   link.click();
@@ -29,7 +29,7 @@ function Navbar() {
           <li><a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a></li>
           <li><a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a></li>
           <li><a href="#achievements" onClick={() => setMenuOpen(false)}>Achievements</a></li>
-          <li><a href="https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a></li>
+          <li><a href="https://drive.google.com/file/d/1STBrlzhA5hGvwCa_pTtIuGsf4h9SOBr4/view?usp=drive_link" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a></li>
           <li>
             <a href="https://github.com/Harshilpatel2605" target="_blank" rel="noopener noreferrer" aria-label="GitHub" onClick={() => setMenuOpen(false)}>
               <FaGithub style={{ verticalAlign: 'middle', fontSize: '1.3em' }} />
@@ -85,18 +85,17 @@ function App() {
                 <li><FaCuttlefish className="icon-skill" /> C++</li>
                 <li><FaJs className="icon-skill" /> JavaScript</li>
                 <li><FaCuttlefish className="icon-skill" /> C</li>
-                <li><SiHaskell className="icon-skill" /> Haskell</li>
+                <li><FaRegStar className="icon-skill" /> DSA</li>
               </ul>
             </div>
             <div style={{ marginTop: '1.1em' }}>
               <strong>Frameworks/Libraries:</strong>
               <ul className="portfolio-skills">
-                <li><FaReact className="icon-skill" /> React JS</li>
-                <li><SiMui className="icon-skill" /> Material UI</li>
-                <li><SiNumpy className="icon-skill" /> NumPy</li>
-                <li><SiPandas className="icon-skill" /> Pandas</li>
-                <li><SiGit className="icon-skill" /> Git</li>
-                <li><FaGithub className="icon-skill" /> GitHub</li>
+                <li><FaReact className="icon-skill" /> NumPy</li>
+                <li><SiMui className="icon-skill" /> Pandas</li>
+                <li><SiNumpy className="icon-skill" /> React JS</li>
+                <li><SiPandas className="icon-skill" /> Material UI</li>
+                <li><SiGit className="icon-skill" /> Git VCS</li>
               </ul>
             </div>
             <div style={{ marginTop: '1.1em' }}>
@@ -116,19 +115,19 @@ function App() {
         <h2 className="accent-heading">Featured Projects</h2>
         <div className="portfolio-projects-grid">
           <div className="portfolio-card" data-aos="zoom-in" data-aos-delay="200">
-            <h3>Movie Recommendation System (KNN)</h3>
-            <p>Developed a K-Nearest Neighbors-based movie recommendation system using collaborative filtering and the MovieLens dataset. Implemented in Python with scikit-learn and NumPy.</p>
-            <a href="https://github.com/Harshilpatel2605/movie-recommendation-KNN" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <h3>Spam Email Classifier (SVM)</h3>
+            <p> Developed a spam detection system from scratch using Soft-Margin Support Vector Machine (SVM). Implemented the dual SVM formulation manually using cvxopt solver, incorporating slack variables and KKT conditions for optimal classification..</p>
+            <a href="https://github.com/Harshilpatel2605/Spam-Email-Classification---SVM" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
           <div className="portfolio-card" data-aos="zoom-in" data-aos-delay="300">
-            <h3>Handwritten Digit Classification</h3>
-            <p>Built a digit classification model trained on the MNIST dataset using Bernoulli Naive Bayes. Achieved accurate predictions on custom digit inputs. Utilized NumPy and Scikit-learn.</p>
-            <a href="https://github.com/Harshilpatel2605" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <h3>Fruit Ripeness Classification</h3>
+            <p>Developed a Convolutional Neural Network (CNN) using TensorFlow and Keras to classify fruit ripeness for 3 types of fruits (apple, banana, orange) across 9 classes (unripe, fresh, and rotten for each fruit).</p>
+            <a href="https://github.com/Harshilpatel2605/Fruit-Ripeness-Classifier" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
           <div className="portfolio-card" data-aos="zoom-in" data-aos-delay="400">
-            <h3>React Portfolio Website</h3>
-            <p>Fully functional and mobile responsive portfolio website built with ReactJS and Material-UI. Integrated EmailJS for client-side email sending. Deployed on Netlify.</p>
-            <a href="https://github.com/Harshilpatel2605" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <h3>Cash Flow Minimizer System</h3>
+            <p>Cash flow optimizer minimizes the inter-bank transactions using greedy algorithms. Designed a flexible architecture supporting multiple payment modes per bank, using set intersections to ensure compatibility in settlements.</p>
+            <a href="https://github.com/Harshilpatel2605/Cash-Flow-Minimizer" target="_blank" rel="noopener noreferrer">View on GitHub</a>
           </div>
         </div>
       </section>
@@ -136,7 +135,7 @@ function App() {
         <h2 className="accent-heading">Achievements</h2>
         <ul className="portfolio-achievements">
           <li><FaTrophy className="icon-achievement" /> Got AIR 2740 in JEE Advanced, and AIR 3047 in JEE Mains (General Category).</li>
-          <li><FaRegStar className="icon-achievement" /> Solved 650+ DSA questions on LeetCode.</li>
+          <li><FaRegStar className="icon-achievement" /> Solved 700+ DSA questions on LeetCode.</li>
         </ul>
       </section>
       <footer className="portfolio-footer">
